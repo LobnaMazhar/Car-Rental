@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Car Rental</string>
+    <string name="welcome_message">Welcome to Our rental\ncar app</string>
+    <string name="username">User Name</string>
+    <string name="continue_">Continue</string>
+    <string name="welcome">Welcome</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="car_style">Car Style</string>
+    <string name="details">Details</string>
+    <string name="result">result</string>
+    <string name="available">Available</string>
+    <string name="not_available">Not Available</string>
+    <string name="car">car</string>
+    <string name="save">Save</string>
+    <string name="Days">Days:</string>
+    <string name="start_date">Start Date:</string>
+</resources>

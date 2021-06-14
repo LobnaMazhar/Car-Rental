@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="civm"
+            type="lobna.c3s.task.ui.details.CarItemViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_size_small"
+        android:layout_marginBottom="@dimen/margin_padding_size_small"
+        android:background="@drawable/shape_red_light_corner5"
+        android:onClick="@{civm::onItemClick}"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_padding_size_small"
+        android:paddingTop="@dimen/margin_padding_size_medium"
+        android:paddingEnd="@dimen/margin_padding_size_small"
+        android:paddingBottom="@dimen/margin_padding_size_medium">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_padding_size_large"
+            android:layout_weight="1"
+            android:text="@{civm.item.car_model}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{civm.item._Available ? @string/available : @string/not_available}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+</layout>

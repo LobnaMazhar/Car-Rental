@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:loadImage="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="csivm"
+            type="lobna.c3s.task.ui.home.CarStyleItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_padding_size_small"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:onClick="@{csivm::onItemClick}"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_padding_size_small">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                loadImage:src="@{csivm.item.image_name}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{csivm.item.category}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
